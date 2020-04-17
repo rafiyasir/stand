@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    text-align: center;
+    background: url(../frame1.png) no-repeat;
+    background-size: cover;
+}
+
+.main-header {
+    height: 100vh;
+    
+}
+.brand-logo {
+    position: relative !important;
+}
+
+span {
+    opacity: 0;
+    transition: all 0.4s ease 6s;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+    color:  rgb(236, 239, 243);
+}
+
+.btn-custom {
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, rgb(141,188,250), rgb(169, 175, 183), rgb(169,181,195));
+}
+
+.btn {
+    background-color:  rgb(141,188,250) !important;
+}
+
+#radial-bg,
+#man,
+#shadow-1,
+#shadow-2,
+#shadow-3,
+#shadow-4 {
+   display: none;
+}
+
+#man,
+#shadow-1,
+#shadow-2,
+#shadow-3,
+#shadow-4 {
+    animation: man 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.bubling1{
+    opacity: 0;
+    animation: bubling 1.3s ease-in-out infinite alternate 8s;
+}
+
+.bubling2{
+    opacity: 0;
+    animation: bubling 1.6s ease-in-out infinite alternate 8s;
+}
+
+.bubling3{
+    opacity: 0;
+    animation: bubling 1.9s ease-in-out infinite alternate 8s;
+}
+
+@keyframes bubling {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes man {
+    from {
+        transform: translateY(0%) rotateY(0deg);
+    }
+    to {
+        transform: translateY(5%) rotateY(10deg);
+    }
+}
+
+@media(max-width : 700px) {
+    .brand-logo {
+        position: absolute !important;
+    }
+}
