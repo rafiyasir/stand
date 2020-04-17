@@ -102,4 +102,7 @@ span.fade {
     .brand-logo {
         position: absolute !important;
     }
+    .fade{
+        font-size: 2.6rem;
+    }
 }
