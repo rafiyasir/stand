@@ -39,6 +39,7 @@ span.fade {
 
 .side-nav {
     background-image: linear-gradient(to top left, rgb(141,188,250), rgb(169, 175, 183), rgb(169,181,195)); 
+    color: white;
 }
 
 .btn {
