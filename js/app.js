@@ -53,15 +53,18 @@ function complete(){
  let flag = 1;
  
  const tag = document.querySelector('.tag-line');
- const strTag = tag.textContent;
- const splitTag = strTag.split("");
- tag.textContent = "";
+ if(tag !== null) {
+    var strTag = tag.textContent;
+    var splitTag = strTag.split("");
+    tag.textContent = "";
+ }
+
 
 window.addEventListener('scroll', function() {
   let scroll = window.pageYOffset;
   // document.getElementById('showScroll').innerHTML = window.pageYOffset + 'px';
 
-  if(scrollY > 300 && flag === 1) {
+  if(scrollY > 300 && flag === 1 && tag !== null) {
     flag++;
   
     for(let i = 0; i < splitTag.length; i++){
