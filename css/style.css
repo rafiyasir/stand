@@ -7,8 +7,32 @@
 
 body {
     text-align: center;
-    background: url(../frame1.png) no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to bottom right, rgba(141,188,250,0.8), rgba(169, 175, 183,0.8), rgba(169,181,195,0.8));
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px rgb(19, 70, 136); 
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: linear-gradient(to bottom right, rgb(141,188,250), rgb(127, 148, 175), rgb(169,181,195)); 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175), rgb(169,181,195)); 
+}
+
+.dropdown-content{
+    overflow: visible !important;
 }
 
 .main-header {
@@ -19,31 +43,92 @@ body {
     position: relative !important;
 }
 
-span {
+.main-tag {
     opacity: 0;
-    transition: all 0.4s ease 6s;
+    transition: all 0.4s ease;
     transform: translateY(50px);
     display: inline-block;
 }
 
-span.fade {
+.main-tag.fade {
     opacity: 1;
     transform: translateY(0px);
-    color:  rgb(236, 239, 243);
+    color:  white;
+}
+
+.tag-line-span {
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+.tag-line-span.fade-tag {
+    opacity: 1;
+    color:  white;
 }
 
 .btn-custom {
     border-radius: 20px;
-    background-image: linear-gradient(to bottom right, rgb(141,188,250), rgb(169, 175, 183), rgb(169,181,195));
+    background-image: linear-gradient(to bottom right, rgb(141,188,250), rgb(127, 148, 175), rgb(169,181,195));
 }
 
 .side-nav {
     background-image: linear-gradient(to top left, rgb(141,188,250), rgb(169, 175, 183), rgb(169,181,195)); 
     color: white;
 }
+.side-nav li>a {
+    color: white;
+}
+
+.dropdown-content {
+    background-image: linear-gradient(to top left, rgb(141,188,250), rgb(169, 175, 183), rgb(169,181,195)); 
+}
+.dropdown-content li>a {
+    color: white;
+}
+
+.collapsible-body {
+    background-image: linear-gradient(to top left, rgb(141,188,250), rgb(169, 175, 183), rgb(169,181,195)); 
+}
+.collapsible-body li>a {
+    color: black;
+}
+
 
 .btn {
     background-color:  rgb(141,188,250) !important;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    color:  white;
+}
+
+.client img {
+    height: 150px;
+    margin: 10px;
+    width: 200px;
+}
+
+.clients h1 {
+    color: white;
+}
+
+.social-icons {
+    height: 20px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.page-footer {
+    background-image: linear-gradient(to top left, rgb(141,188,250), rgb(169, 175, 183), rgb(169,181,195));
 }
 
 #radial-bg,
@@ -67,17 +152,219 @@ span.fade {
 
 .bubling1{
     opacity: 0;
-    animation: bubling 1.3s ease-in-out infinite alternate 8s;
+    animation: bubling 1.3s ease-in-out infinite alternate 2s;
 }
 
 .bubling2{
     opacity: 0;
-    animation: bubling 1.6s ease-in-out infinite alternate 8s;
+    animation: bubling 1.6s ease-in-out infinite alternate 2s;
 }
 
 .bubling3{
     opacity: 0;
-    animation: bubling 1.9s ease-in-out infinite alternate 8s;
+    animation: bubling 1.9s ease-in-out infinite alternate 2s;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5 {
+    opacity: 0;
+}
+
+
+.box-open {
+    opacity: 0;
+    animation: box-open 2s linear infinite;
+}
+
+.box-open:nth-child(1){
+    animation-delay: -1s;
+}
+.box-open:nth-child(2){
+    animation-delay: -1.2s;
+}
+
+.box-close {
+    opacity: 0;
+    animation: box-close 2s linear infinite;
+}
+
+#rotar-1,
+#rotar-2,
+#rotar-3,
+#rotar-4,
+#rotar-5,
+#rotar-6 {
+    animation: rotar 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#bar-1 {
+    animation: bar-1 1.5s linear infinite alternate;
+}
+
+#bar-2 {
+    animation: bar-1 1.5s linear infinite alternate;
+    animation-delay: 0.5s;
+}
+
+#bar-3 {
+    animation: bar-1 1.5s linear infinite alternate;
+    animation-delay: 1s;
+}
+
+#line-1 {
+    animation : line-1 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+#light-1{
+    opacity: 0;
+    animation: bar-1 1s linear infinite alternate;
+}
+
+#light-2{
+    opacity: 0;
+    animation: bar-1 1s linear infinite alternate;
+    animation-delay: 0.4s;
+}
+
+#light-3{
+    opacity: 0;
+    animation: bar-1 1s linear infinite alternate;
+    animation-delay: 0.8s;
+}
+
+#bag-i {
+    opacity: 0;
+    animation: rotate 1s linear infinite;
+}
+#bag-ii {
+    opacity: 0;
+    animation: rotate 1s linear infinite;
+    animation-delay: 0.2s;
+}
+
+#umb-i {
+    opacity: 0;
+    animation: rotate 1s linear infinite;
+    animation-delay: 0.4s;
+}
+#umb-ii {
+    opacity: 0;
+    animation: rotate 1s linear infinite;
+    animation-delay: 0.6s;
+}
+
+#cap-i {
+    opacity: 0;
+    animation: rotate 1s linear infinite;
+    animation-delay: 0.8s;
+} 
+#cap-ii {
+    opacity: 0;
+    animation: rotate 1s linear infinite;
+    animation-delay: -0.3s;
+}
+
+#tag-vector {
+    animation: vector 4s ease;
+}
+
+@keyframes vector {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes box-open {
+    0% {
+        opacity: 0.2;
+        transform: translateX(0%);
+    }
+    25% {
+        opacity: 1;
+        transform: translateX(5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(20%);
+    }
+}
+
+@keyframes box-close {
+    0% {
+        opacity: 1;
+        transform: translateX(-15%);
+    }
+    25% {
+        opacity: 1;
+        transform: translateX(-10%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-5%);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0.3;
+        transform: translateX(5%);
+    }
+}
+
+@keyframes rotar {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes bar-1 {
+  0%{
+    opacity: 0;      
+  }
+  25% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 0;
+  }
+  75% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes line-1 {
+    from {
+        transform: rotateZ(-80deg);
+    }
+    to {
+        transform: rotateZ(80deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        opacity: 1;
+        transform: rotateY(0deg) translateY(-2%);
+    }
+    to {
+        transform: rotateY(20deg) translateY(10%);
+    }
 }
 
 @keyframes bubling {
@@ -102,7 +389,16 @@ span.fade {
     .brand-logo {
         position: absolute !important;
     }
-    h1{
-        font-size: 2.5rem;
+    h1 {
+        font-size: 4rem;
     }
+}
+@media(max-width : 500px) {
+    
+    h1{
+        font-size: 2.45rem;
+    }
+    /* .tag-line h1 {
+        font-size: 2.8rem;
+    } */
 }
