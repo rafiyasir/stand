@@ -35,10 +35,10 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
     overflow: visible !important;
 }
 
-.main-header {
+/* .main-header {
     height: 100vh;
     
-}
+} */
 .brand-logo {
     position: relative !important;
 }
@@ -398,7 +398,15 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
     h1{
         font-size: 2.45rem;
     }
-    /* .tag-line h1 {
+}
+@media(min-height : 1000px) { 
+    .tag-line {
         font-size: 2.8rem;
-    } */
+    }
+}
+@media(max-width : 398px) {
+    .brand-logo {
+        position: absolute !important;
+        font-size: 2rem !important;
+    }
 }
