@@ -72,6 +72,36 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
     background-image: linear-gradient(to bottom right, rgb(141,188,250), rgb(127, 148, 175), rgb(169,181,195));
 }
 
+.btn-extend {
+    display: block;
+    width: 100%;
+}
+
+.btn-modal {
+    background-image: linear-gradient(to bottom right, rgba(9, 42, 87, 1), rgba(41, 145, 178, 1));
+}
+
+.card-panel, .modal {
+    background-image: linear-gradient(to bottom right, rgb(209, 215, 226), rgb(249, 250, 252));
+    border-radius: 10px;
+}
+
+.input-field input:focus + label, .input-field .prefix.active {
+    color: rgb(141,188,250) !important;
+  }
+  /* label underline focus color */
+ .input-field input:focus {
+    border-bottom: 1px solid rgb(141,188,250) !important;
+    box-shadow: 0 1px 0 0 rgb(141,188,250) !important
+  }
+  .materialize-textarea:focus + label {
+    color: rgb(141,188,250) !important;
+  }
+  .materialize-textarea:focus {
+    border-bottom: 1px solid rgb(141,188,250) !important;
+    box-shadow: 0 1px 0 0 rgb(141,188,250) !important
+  }
+
 .side-nav {
     background-image: linear-gradient(to top left, rgb(141,188,250), rgb(169, 175, 183), rgb(169,181,195)); 
     color: white;
@@ -272,6 +302,44 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
 
 #tag-vector {
     animation: vector 4s ease;
+}
+
+/* #contact-bg{
+    animation: opaque 2s ease;
+}
+#postman {
+    animation: opaque 2s linear 1s;
+}
+#envalope-open {
+    animation: opaque 2s ease 1.5s;
+}
+#envalope-close {
+    animation: opaque 2s ease 1.5s;
+}
+#location-shadow {
+    animation: opaque 2s ease 1.6s;
+}
+#location-pin {
+    animation: opaque 2s ease 1s;
+    animation: pin 2s ease;
+} */
+
+@keyframes pin {
+    from {
+        transform: translateY(-10%) translateX(5%);
+    }
+    to {
+        transform: translateY(0%) translateX(0%);
+    }
+}
+
+@keyframes opaque {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes vector {

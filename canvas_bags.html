@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Atg Khidmat | About</title>
+    <title>Atg Khidmat | Canvas Bags</title>
 </head>
 <body>
     <header class="main-header">
@@ -159,7 +160,104 @@
         </div>
     </header>
 
-    <div style="height: 2000px;"></div>
+    <!-- Section : Images -->
+    <section class="section images">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="img/products/bags/jute1.jpg" data-lightbox="product-images">
+                  <img height="240PX;" width="240px;" src="img/products/bags/jute1.jpg" alt="" class="image-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="img/products/bags/jute2.jpg" data-lightbox="product-images">
+                  <img height="240PX;" width="240px;" src="img/products/bags/jute2.jpg" alt="" class="image-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="img/products/bags/jute3.jpg" data-lightbox="product-images">
+                  <img height="240PX;" width="240px;" src="img/products/bags/jute3.jpg" alt="" class="image-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="img/products/bags/jute4.jpg" data-lightbox="product-images">
+                  <img height="240PX;" width="240px;" src="img/products/bags/jute4.jpg" alt="" class="image-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="img/products/bags/jute5.jpg" data-lightbox="product-images">
+                  <img height="240PX;" width="240px;" src="img/products/bags/jute5.jpg" alt="" class="image-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <a href="img/products/bags/jute6.jpg" data-lightbox="product-images">
+                  <img height="240PX;" width="240px;" src="img/products/bags/jute6.jpg" alt="" class="image-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fixed Action Button -->
+  <div class="fixed-action-btn">
+    <a href="#query-modal" class="modal-trigger btn-floating btn-large btn-modal"><i class="material-icons">message</i></a>
+  </div>
+
+    <!-- Add Query Modal -->
+    <div id="query-modal" class="modal">
+      <div class="modal-content">
+        <h4>Have any Doubt? Drop a line</h4>
+        <form>
+          <div class="input-field">
+            <i class="material-icons prefix">phone</i>
+            <input id="phone" type="tel">
+            <label for="phone">Phone Number</label>
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="tel">
+            <label for="email">Email</label>
+          </div>
+
+          <div class="input-field">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea class="materialize-textarea" id="message"></textarea>
+            <label for="message">Message</label>
+          </div>
+          <input href="#success-modal" type="submit" value="Send the Message" class="modal-trigger btn btn-large btn-extend btn-custom modal-action modal-close">
+        </form>
+      </div>
+    </div>
 
      <!-- Footer -->
      <footer class="page-footer">
@@ -225,10 +323,12 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/materialize.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
     <script>
         $(document).ready(function () {
           // Init Sidenav
           $('.button-collapse').sideNav();
+          $('.modal').modal();
          
           //Drop Down
             $('.dropdown-button').dropdown({

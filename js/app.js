@@ -12,35 +12,38 @@ var myInterval = setInterval(function() {
     currentEle.fadeIn('slow');
     currentEle = currentEle.next();
   }
-}, 1000);
+}, 300);
 
 const text = document.querySelector('.fancy');
-const strText = text.textContent;
-const splitText = strText.split("");
-text.textContent = "";
+if(text !== null) {
+  const strText = text.textContent;
+  const splitText = strText.split("");
+  text.textContent = "";
 
-for(let i = 0; i < splitText.length; i++){
-    let char = (splitText[i] === " ") ? "&nbsp;" : splitText[i];
-    text.innerHTML += `<span class="main-tag">${char}</span>`;
+  for(let i = 0; i < splitText.length; i++){
+      let char = (splitText[i] === " ") ? "&nbsp;" : splitText[i];
+      text.innerHTML += `<span class="main-tag">${char}</span>`;
+  }
+
+  let char = 0;
+  let timer = setInterval(onTick, 50);
+
+  function onTick(){
+      const span = text.querySelectorAll('.main-tag')[char];
+      span.classList.add('fade');
+      char++;
+      if(char === splitText.length){
+          complete();
+          return;
+      }
+  }
+
+  function complete(){
+      clearInterval(timer);
+      timer = null;
+  }
 }
 
-let char = 0;
-let timer = setInterval(onTick, 50);
-
-function onTick(){
-    const span = text.querySelectorAll('.main-tag')[char];
-    span.classList.add('fade');
-    char++;
-    if(char === splitText.length){
-        complete();
-        return;
-    }
-}
-
-function complete(){
-    clearInterval(timer);
-    timer = null;
-}
 
 // if(scrollY <= 20){
 //   body.style.overflow = 'hidden';
