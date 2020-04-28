@@ -44,6 +44,36 @@ if(text !== null) {
   }
 }
 
+const heading = document.querySelector('.head-tag');
+if(heading !== null) {
+  const strheading = heading.textContent;
+  const splitheading = strheading.split("");
+  heading.textContent = "";
+
+  for(let i = 0; i < splitheading.length; i++){
+      let char = (splitheading[i] === " ") ? "&nbsp;" : splitheading[i];
+      heading.innerHTML += `<span class="product-tag">${char}</span>`;
+  }
+
+  let char = 0;
+  let timerHead = setInterval(onTickHead, 100);
+
+  function onTickHead(){
+      const span = heading.querySelectorAll('.product-tag')[char];
+      span.classList.add('fade-head');
+      char++;
+      if(char === splitheading.length){
+          completeHead();
+          return;
+      }
+  }
+
+  function completeHead(){
+      clearInterval(timerHead);
+      timerHead = null;
+  }
+}
+
 
 // if(scrollY <= 20){
 //   body.style.overflow = 'hidden';
@@ -61,6 +91,55 @@ if(text !== null) {
     var splitTag = strTag.split("");
     tag.textContent = "";
  }
+
+ function altclient() {
+  const client1 = document.querySelector('.client-row-1');
+  const client2 = document.querySelector('.client-row-2');
+  const client3 = document.querySelector('.client-row-3');
+  const client4 = document.querySelector('.client-row-4');
+  const client5 = document.querySelector('.client-row-5');
+  const client6 = document.querySelector('.client-row-6');
+  if(client1.classList.contains('appear')){
+    client1.classList.remove('appear');
+    client1.classList.add('hide');
+    client2.classList.remove('hide');
+    client2.classList.add('appear');
+  }
+  else if(client2.classList.contains('appear')){
+    client2.classList.remove('appear');
+    client2.classList.add('hide');
+    client3.classList.remove('hide');
+    client3.classList.add('appear');
+  }
+  else if(client3.classList.contains('appear')){
+    client3.classList.remove('appear');
+    client3.classList.add('hide');
+    client4.classList.remove('hide');
+    client4.classList.add('appear');
+  }
+  else if(client4.classList.contains('appear')){
+    client4.classList.remove('appear');
+    client4.classList.add('hide');
+    client5.classList.remove('hide');
+    client5.classList.add('appear');
+  }
+  else if(client5.classList.contains('appear')){
+    client5.classList.remove('appear');
+    client5.classList.add('hide');
+    client6.classList.remove('hide');
+    client6.classList.add('appear');
+  }
+  else if(client6.classList.contains('appear')){
+    client6.classList.remove('appear');
+    client6.classList.add('hide');
+    client1.classList.remove('hide');
+    client1.classList.add('appear');
+  }
+}
+let isClientPresent = document.querySelector('.clients');
+if(isClientPresent !== null) {
+  setInterval(() => altclient(), 4000);
+}
 
 
 window.addEventListener('scroll', function() {
