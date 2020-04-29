@@ -158,6 +158,10 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
     width: 200px;
 }
 
+.card-client {
+    background-color: transparent;
+}
+
 .clients h1 {
     color: white;
 }
