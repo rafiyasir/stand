@@ -39,6 +39,10 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
     height: 100vh;
     
 } */
+.container-nav {
+    width: 90%;
+}
+
 .brand-logo {
     position: relative !important;
 }
@@ -535,5 +539,4 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
         height: 30px;
     }
 }
-
 
