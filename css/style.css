@@ -496,6 +496,16 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
     h1{
         font-size: 2.45rem;
     }
+
+    .brand-logo {
+        position: absolute !important;
+        font-size: 1.9rem !important;
+    }
+    .brand-logo img {
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+    }
 }
 @media(min-height : 1000px) { 
     .tag-line {
@@ -506,6 +516,18 @@ background: linear-gradient(to bottom right, rgb(11, 48, 97), rgb(127, 148, 175)
     .brand-logo {
         position: absolute !important;
         font-size: 1.6rem !important;
+    }
+    .brand-logo img {
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media(max-width : 330px) {
+    .brand-logo {
+        position: absolute !important;
+        font-size: 1.4rem !important;
     }
     .brand-logo img {
         vertical-align: middle;
